@@ -1,0 +1,34 @@
+To resolve this issue, explicitly set the width of the parent container:
+
+```css
+.parent {
+  width: 500px; /* or any specific width */
+}
+div {
+  width: calc(100% - 20px);
+  padding: 10px;
+}
+```
+
+Alternatively, use a different approach for calculating width that doesn't rely on the parent's dynamic width:
+
+```css
+div {
+  width: 90vw; /* using viewport width */
+  padding: 10px;
+  box-sizing: border-box; /* include padding in total width */
+}
+```
+
+Or use flexbox:
+
+```css
+.parent {
+  display: flex;
+}
+div {
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box;
+}
+```
