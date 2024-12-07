@@ -1,0 +1,10 @@
+The following CSS code causes unexpected behavior in some browsers:
+
+```css
+div {
+  width: calc(100% - 20px);
+  padding: 10px;
+}
+```
+
+The `calc()` function might not calculate correctly if the parent element's width is not explicitly set.  This can lead to unexpected rendering, especially if the parent element's width is determined dynamically or inherited.
